@@ -54,7 +54,7 @@ response.raise_for_status()
 articles = response.json()["articles"][:5]
 
 for article in articles:
-    message_core += f"Title: {article["title"]}\nBrief: {article["description"]}\n\n"
+    message_core += f"Title: {article['title']}\nBrief: {article['description']}\n\n"
 
 client = Client(account_sid, auth_token)
 message = client.messages.create(
